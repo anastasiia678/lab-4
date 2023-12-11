@@ -1,0 +1,30 @@
+#include <iostream>
+
+// Function to determine the sign of a real number
+int Sign(double X) {
+    if (X < 0) {
+        return -1;
+    } else if (X == 0) {
+        return 0;
+    } else {
+        return 1;
+    }
+}
+
+int main() {
+    // Input two real numbers A and B
+    double A, B;
+    std::cout << "Enter the value of A: ";
+    std::cin >> A;
+
+    std::cout << "Enter the value of B: ";
+    std::cin >> B;
+
+    // Calculate Sign(A) + Sign(B)
+    int result = Sign(A) + Sign(B);
+
+    // Output the result
+    std::cout << "Sign(A) + Sign(B) is: " << result << std::endl;
+
+    return 0;
+}
