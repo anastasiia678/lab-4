@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main() {
+    double x, y;
+
+    // Input the coordinates (x, y)
+    std::cout << "Enter the x-coordinate: ";
+    std::cin >> x;
+
+    std::cout << "Enter the y-coordinate: ";
+    std::cin >> y;
+
+    // Check if the point lies in the fourth quadrant
+    bool isInFourthQuadrant = (x > 0) && (y < 0);
+
+    // Output the result
+    if (isInFourthQuadrant) {
+        std::cout << "The point with coordinates (" << x << ", " << y << ") lies in the fourth quadrant." << std::endl;
+    } else {
+        std::cout << "The point with coordinates (" << x << ", " << y << ") does not lie in the fourth quadrant." << std::endl;
+    }
+
+    return 0;
+}
