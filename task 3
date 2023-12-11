@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int threeDigitNumber;
+
+    // Input a three-digit number
+    cout << "Enter a three-digit number: ";
+    cin >> threeDigitNumber;
+
+    // Check if the entered number is indeed three digits
+    if (threeDigitNumber >= 100 && threeDigitNumber <= 999) {
+        // Extract the last digit
+        int lastDigit = threeDigitNumber % 10;
+
+        // Remove the last digit
+        int truncatedNumber = threeDigitNumber / 10;
+
+        // Construct the new number by placing the last digit to the left
+        int resultNumber = lastDigit * 100 + truncatedNumber;
+
+        // Output the result
+        cout << "Transformed number: " << resultNumber << endl;
+    } else {
+        cout << "Please enter a valid three-digit number." << endl;
+    }
+
+    return 0;
+}
